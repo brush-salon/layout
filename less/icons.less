@@ -1,0 +1,75 @@
+@row1h : 18px;
+@row2h : 30px;
+@row3h : 85px;
+
+.i() {
+  display: inline-block;
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
+}
+
+.i-row1 {
+  .i();
+  height: @row1h;
+  width: @row1h;
+}
+
+.i-row2 {
+  .i();
+  height: @row2h;
+  width: @row2h;
+}
+
+.i-row3 {
+  .i();
+  height: @row3h;
+  width: @row3h;
+}
+
+.i-row1__marker {
+  background-position: -@row1h*0 0px;
+}
+
+.i-row1__phone {
+  background-position: -@row1h*1 0px;
+}
+
+.i-row1__vk {
+  background-position: -@row1h*2 0px;
+}
+
+.i-row1__inst {
+  background-position: -@row1h*3 0px;
+}
+
+.i-row1__fb {
+  background-position: -@row1h*4 0px;
+}
+
+.i-row1__close {
+  background-position: -@row1h*5 0px;
+}
+
+.i-row1__prev {
+  background-position: -@row1h*6 0px;
+}
+
+.i-row1__next {
+  background-position: -@row1h*7 0px;
+}
+
+.i-row2__fb {
+  background-position: -@row2h*0 -@row1h;
+}
+
+.i-row2__vk {
+  background-position: -@row2h*1 -@row1h;
+}
+
+.i-row2__like {
+  background-position: -@row2h*2 -@row1h;
+}
+
+.i-row3__zoom {
+  background-position: -@row3h*0 -@row1h - @row2h;
+}

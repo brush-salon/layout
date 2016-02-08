@@ -1,0 +1,64 @@
+.g-cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: @cover;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.g-image-control {
+  position: absolute;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.g-zoom-control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.g-center() {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.g-black-link() {
+  color: @black-font;
+  text-decoration: none;
+  &:hover {
+    color: @black-font;
+  }
+}
+
+.g-font(@size; @lh) {
+  font-size: @size;
+  line-height: @lh;
+}
+
+.g-font-regular (@size; @lh:@line-height-base; @weight:400;) {
+  .g-font(@size; @lh);
+  font-weight: @weight;
+  font-family: GothamProRegular;
+}
+
+.g-font-medium (@size; @lh:@line-height-base) {
+  .g-font(@size; @lh);
+  font-family: GothamProMedium;
+}
+
+.g-font-bold (@size; @lh:@line-height-base) {
+  .g-font(@size; @lh);
+  font-family: GothamProBold;
+}
+
+.g-modal-content {
+  display: none;
+}

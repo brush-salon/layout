@@ -1,0 +1,168 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: @footer-width;
+  font: 15px/30px GothamProRegular;
+}
+
+.container {
+  padding-bottom: 80px;
+}
+
+.b-footer {
+  padding: 50px 80px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: @footer-width;
+  border-top: 1px solid @gray;
+  .g-center;
+}
+
+.b-footer__social {
+  float: right
+}
+
+.b-footer__copyright {
+  float: left;
+}
+
+.b-footer__logo {
+  color: @gray-font;
+  img {
+    margin-top: -10px;
+  }
+  .g-head();
+}
+
+.b-head {
+  padding-top: 15px;
+  @media (min-width: @screen-xs-min) {
+    height: 156px;
+    padding-top: 71px;
+  }
+  .g-center;
+}
+
+.g-head {
+  display: inline-block;
+  @media (max-width: @screen-xs-min) {
+    display: block;
+    float: none;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+.b-contacts {
+  .g-head();
+  float: left;
+}
+
+.b-contacts__item {
+  height: 23px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: inline;
+
+  font-weight: 900;
+  span {
+    vertical-align: middle;
+    @media (min-width: @screen-xs-min) {
+      margin-right: 5px;
+    }
+  }
+  img {
+    margin-right: 17px;
+  }
+  a {
+    .g-black-link;
+  }
+  @media (min-width: @screen-xs-min) {
+    display: block;
+    font-size: 13px;
+  }
+}
+
+.b-logo {
+  .g-head();
+  margin-top: -10px;
+  img {
+    height: 52px;
+  }
+}
+
+.b-register {
+  .g-head();
+  float: right;
+  text-align: center;
+  height: 38px;
+  a {
+    .g-black-link;
+  }
+}
+
+.b-register__button {
+  display: inline-block;
+  @media (min-width: @screen-xs-min) {
+    float: right;
+  }
+  line-height: 38px;
+  width: 170px;
+  border: 2px solid black;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.b-menu {
+  .g-center;
+  margin: 10px 0 50px 0;
+}
+
+.b-menu-main {
+  margin: 0 auto;
+  padding-bottom: 6px;
+  border-bottom: 1px solid @gray;
+  li {
+    white-space: nowrap;
+    list-style-type: none;
+    margin: 0 50px 0 0;
+    //@media (min-width: @screen-xs-min) {
+    display: inline;
+    //}
+    text-transform: uppercase;
+    font: 15px GothamProMedium;
+  }
+  li:last-child {
+    margin: 0;
+  }
+  a {
+    .g-black-link;
+  }
+}
+
+.b-menu-example {
+  margin: 4px 0 0 0;
+  li {
+    white-space: nowrap;
+    margin: 0 13px 0 0;
+    padding: 0 13px 0 0;
+    display: inline;
+    text-transform: capitalize;
+    font: 14px GothamProLight;
+    border-right: solid 1px @gray;
+  }
+  li:last-child {
+    border: 0px;
+  }
+  a {
+    color: @gray-font;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,88 @@
+@import "~bootstrap/less/bootstrap";
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+  vertical-align: middle;
+}
+
+@modal-backdrop-opacity: .8;
+
+.modal-footer {
+
+  color: @white-font;
+  text-align: left;
+  padding: 10px 0;
+  border: none;
+  .header {
+    text-transform: uppercase;
+    .g-font-bold(13px);
+  }
+  .text {
+    color: @gray-font;
+  }
+}
+
+.b-modal-dialog {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.b-modal-content {
+  background: none;
+  border: none;
+  .box-shadow(none);
+}
+
+.b-modal-body {
+  padding: 0;
+
+  .close {
+    font-size: 35px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0.7;
+    z-index: 2;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .controls {
+    position: absolute;
+    font-size: 35px;
+    bottom: 10px;
+    width: 100%;
+    opacity: 0.7;
+    z-index: 2;
+    .next {
+      position: inherit;
+      right: 10px;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    .prev {
+      left: 10px;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+}

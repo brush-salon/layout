@@ -44,14 +44,14 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(78);
+	__webpack_require__(77);
 	__webpack_require__(118);
 
 
-	var PressPage = __webpack_require__(213);
-	var AboutPage = __webpack_require__(215);
+	var PressPage = __webpack_require__(212);
+	var AboutPage = __webpack_require__(214);
 
-	var PressModal = __webpack_require__(216);
+	var PressModal = __webpack_require__(215);
 
 	function PageController(page, layout) {
 	    this.pages = {
@@ -68,6 +68,7 @@
 	    this.layout = new this.layouts[layout];
 	    this.page = new this.pages[page];
 	}
+
 	PageController.prototype.showModal = function (modal, options) {
 	    if (this.modals[modal]) {
 	        this.modal = new this.modals[modal](options);
@@ -75,7 +76,7 @@
 	    this.modal.show();
 	};
 
-	window.page = new PageController('press', 'layout');
+	window.page = new PageController(window.url, 'layout');
 
 /***/ },
 /* 1 */,
@@ -154,13 +155,13 @@
 /* 74 */,
 /* 75 */,
 /* 76 */,
-/* 77 */,
-/* 78 */
+/* 77 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
+/* 78 */,
 /* 79 */,
 /* 80 */,
 /* 81 */,
@@ -11513,11 +11514,10 @@
 
 
 /***/ },
-/* 212 */,
-/* 213 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Abstract = __webpack_require__(214);
+	var Abstract = __webpack_require__(213);
 
 	function Press() {
 	    Abstract.apply(this, arguments);
@@ -11539,7 +11539,7 @@
 	module.exports = Press;
 
 /***/ },
-/* 214 */
+/* 213 */
 /***/ function(module, exports) {
 
 	function Abstract() {
@@ -11554,26 +11554,20 @@
 	module.exports = Abstract;
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Abstract = __webpack_require__(214);
+	var Abstract = __webpack_require__(213);
 
 	function About() {
 	    Abstract.apply(this, arguments);
-	    $('.aboutSlider').slick({
-	        dots: false,
-	        infinity: true,
-	        centerMode: true,
-	        swipeToSlide: true,
-	        slidesToShow: 3,
-	        slidesToScroll: 1,
-	        variableWidth: true,
-	        appendArrows: '.aboutSliderControl',
-	        prevArrow: '<a href="#" class="i-row1 i-row1__prev"></a>',
-	        nextArrow: '<a href="#" class="i-row1 i-row1__next"></a>',
+	    console.warn('here', $('.swiper-container'), $('.swiper-wrapper'));
+	    this.swiper = new Swiper('.swiper-container', {
+	        slidesPerView: 3,
+	        loop: true,
+	        nextButton: $('.aboutSliderControl').find('.next')[0],
+	        prevButton: $('.aboutSliderControl').find('.prev')[0]
 	    });
-	    console.warn('here');
 	}
 
 	About.prototype = $.extend({constructor: About}, Object.create(Abstract.prototype), {});
@@ -11581,11 +11575,11 @@
 	module.exports = About;
 
 /***/ },
-/* 216 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Abstract = __webpack_require__(217);
-	var Swiper = __webpack_require__(218)
+	var Abstract = __webpack_require__(216);
+	var Swiper = __webpack_require__(217)
 
 	function Press(options) {
 	    Abstract.apply(this, arguments);
@@ -11616,7 +11610,7 @@
 	module.exports = Press;
 
 /***/ },
-/* 217 */
+/* 216 */
 /***/ function(module, exports) {
 
 	function Abstract() {
@@ -11641,7 +11635,7 @@
 	module.exports = Abstract;
 
 /***/ },
-/* 218 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**

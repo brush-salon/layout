@@ -10,31 +10,34 @@
             результате мастер-классов от Brush Вы научитесь быстро и качественно делать стильные укладки и макияж.
         </p>
     </div>
-    <div class="b-info-photo">
-        <div class="aboutSlider b-info-photo-i">
-            <div class="b-photo-column">
+
+    <div class="b-info-photo swiper-container">
+        <div class="swiper-wrapper aboutSlider b-info-photo-i">
+            <div class="swiper-slide b-photo-column ">
                 <img src="http://placehold.it/184x175">
                 <img src="http://placehold.it/184x175">
             </div>
-            <div class="b-photo-column">
+            <div class="swiper-slide b-photo-column">
                 <img src="http://placehold.it/184x175">
                 <img src="http://placehold.it/184x175">
             </div>
-            <div class="b-photo-column">
+            <div class="swiper-slide b-photo-column">
                 <img src="http://placehold.it/184x360">
             </div>
-            <div class="b-photo-column">
+            <div class="swiper-slide b-photo-column">
                 <img src="http://placehold.it/184x360">
             </div>
-            <div class="b-photo-column">
+            <div class="swiper-slide b-photo-column">
                 <img src="http://placehold.it/184x360">
             </div>
-            <div class="b-photo-column">
+            <div class="swiper-slide b-photo-column">
                 <img src="http://placehold.it/184x360">
             </div>
         </div>
     </div>
 
     <div class="aboutSliderControl b-photo-control">
+        <span class="prev glyphicon glyphicon-menu-left"></span>
+        <span class="next glyphicon glyphicon-menu-right"></span>
     </div>
 </section>

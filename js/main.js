@@ -22,6 +22,7 @@ function PageController(page, layout) {
     this.layout = new this.layouts[layout];
     this.page = new this.pages[page];
 }
+
 PageController.prototype.showModal = function (modal, options) {
     if (this.modals[modal]) {
         this.modal = new this.modals[modal](options);
@@ -29,4 +30,4 @@ PageController.prototype.showModal = function (modal, options) {
     this.modal.show();
 };
 
-window.page = new PageController('press', 'layout');
+window.page = new PageController(window.url, 'layout');

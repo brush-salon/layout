@@ -7793,7 +7793,7 @@ body {
     width: 61%;
   }
 }
-.b-info-photo-i .slick-slide {
+.b-info-photo-i .swiper-slide {
   width: 200px;
 }
 .b-photo-column {
@@ -8073,7 +8073,6 @@ body {
 }
 .b-press-modal img {
   width: 100%;
-  max-width: 860px;
   height: auto;
 }
 .b-price-gender ul {

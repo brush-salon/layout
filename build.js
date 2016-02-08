@@ -38,9 +38,9 @@ var config = function () {
         plugins: [
             new ExtractTextPlugin('[name].css'),
         ],
-        postcss: function () {
-            return [require('autoprefixer')];
-        },
+        //postcss: function () {
+        //    return [require('autoprefixer'))];
+        //},
         watch: true,
     };
 };

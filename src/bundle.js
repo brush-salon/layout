@@ -50,8 +50,9 @@
 
 	var PressPage = __webpack_require__(212);
 	var AboutPage = __webpack_require__(214);
+	var PricePage = __webpack_require__(215);
 
-	var PressModal = __webpack_require__(215);
+	var PressModal = __webpack_require__(216);
 
 	function PageController(page, layout) {
 	    this.pages = {
@@ -11578,8 +11579,31 @@
 /* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Abstract = __webpack_require__(216);
-	var Swiper = __webpack_require__(217)
+	var Abstract = __webpack_require__(213);
+
+	function Price() {
+	    Abstract.apply(this, arguments);
+
+	}
+
+	Price.prototype = $.extend({constructor: Price}, Object.create(Abstract.prototype), {
+	    bindEvents: function () {
+	        var _this = this;
+	        $('.price-toggle-contoller').click(function (elem) {
+	            var target = $(elem.currentTarget).data('target');
+	            $(target).toggle();
+	        });
+	    },
+	});
+
+	module.exports = Price;
+
+/***/ },
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Abstract = __webpack_require__(217);
+	var Swiper = __webpack_require__(218)
 
 	function Press(options) {
 	    Abstract.apply(this, arguments);
@@ -11610,7 +11634,7 @@
 	module.exports = Press;
 
 /***/ },
-/* 216 */
+/* 217 */
 /***/ function(module, exports) {
 
 	function Abstract() {
@@ -11635,7 +11659,7 @@
 	module.exports = Abstract;
 
 /***/ },
-/* 217 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**

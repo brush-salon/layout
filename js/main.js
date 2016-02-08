@@ -4,6 +4,7 @@ require('bootstrap/js/modal');
 
 var PressPage = require('./pages/press.js');
 var AboutPage = require('./pages/about.js');
+var PricePage = require('./pages/price.js');
 
 var PressModal = require('./modal/press.js');
 
